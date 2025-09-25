@@ -1,0 +1,26 @@
+.game-page {
+  display: none;
+}
+
+.welcome-page {
+  transition: opacity 0.5s ease;
+}
+
+.result-page {
+  display: none;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.correct {
+  background-color: #10B981 !important;
+  color: #E5E7EB;
+}
+
+.wrong {
+  background-color: #EF4444 !important;
+  color: #E5E7EB;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ChemQuest!</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="styles/game.css">
+  </head>
+  <body class="bg-gray-900 mb-24">
+    <main class="welcome-page h-screen flex items-center justify-center">
+      <section class="w-3/4 h-72 flex flex-col items-center justify-evenly">
+        <p class="font-extrabold text-2xl lg:text-3xl text-indigo-600">&#129514;ChemQuest!&#10024;</p>
+        <button class="welcome-page-button p-2.5 rounded-lg text-white bg-indigo-500 lg:hover:bg-indigo-700 font-medium text-sm">Start Game</button>
+      </section>
+    </main>
+
+    <main class="game-page">
+      <header class="w-full h-16 flex items-center justify-between">
+        <a class="text-indigo-600 font-extrabold text-lg lg:text-xl pl-2 lg:pl-4">&#129514;ChemQuest!&#10024;</a>
+        <a class="text-indigo-500 underline lg:hover:text-indigo-800 lg:hover:underline font-extrabold text-sm lg:text-lg pr-3 lg:pr-4" href="#explore&credits">Explore&Credits</a>
+      </header>
+
+      <div class="mt-20 mx-auto h-14 w-14 rounded-full flex items-center justify-center bg-gray-400 text-indigo-600 font-extrabold text-lg">
+        <span class="progress">0</span>/25
+      </div>
+
+      <section class="mt-4 mx-auto w-full lg:w-[700px] min-h-[200px] md:min-h-[300px] lg:min-h-[400px] xl:min-h-[500px] lg:border-2 lg:border-white/30 lg:shadow-[0_0_15px_rgba(255,255,255,0.1)] lg:rounded-xl lg:overflow-hidden flex flex-col items-center">
+        <div class="w-full h-16 bg-gray-400 flex items-center justify-center">
+          <p class="font-extrabold text-3xl lg:text-4xl text-indigo-600">QUIZ</p>
+        </div>
+          <p class="question mt-4 font-extrabold text-xl lg:text-2xl text-white text-center"></p>
+        <div class="mt-4 grid gap-4">
+          <button class="answer h-16 w-64 lg:w-[400px] text-gray-900 bg-white shadow-lg lg:hover:bg-gray-400 border-2 border-gray-300 rounded-lg font-extrabold text-xl lg:text-2xl"></button>
+          <button class="answer h-16 w-64 lg:w-[400px] text-gray-900 bg-white shadow-lg lg:hover:bg-gray-400 border-2 border-gray-300 rounded-lg font-extrabold text-xl lg:text-2xl"></button>
+          <button class="answer h-16 w-64 lg:w-[400px] text-gray-900 bg-white shadow-lg lg:hover:bg-gray-400 border-2 border-gray-300 rounded-lg font-extrabold text-xl lg:text-2xl"></button>
+          <button class="answer h-16 w-64 lg:w-[400px] text-gray-900 bg-white shadow-lg lg:hover:bg-gray-400 border-2 border-gray-300 rounded-lg font-extrabold text-xl lg:text-2xl"></button>
+          <button class="submit mb-4 h-16 w-64 lg:w-[400px] text-white bg-green-500 shadow-lg lg:hover:bg-green-700 border-2 border-gray-400 rounded-lg font-extrabold text-xl lg:text-2xl">Next</button>
+        </div>
+      </section>
+    </main>
+
+    <main class="result-page">
+      <section class="mt-28 lg:mt-36 mx-auto w-3/4 h-[500px] flex flex-col items-center justify-evenly bg-green-50 border-2 rounded-xl shadow-lg">
+        <p class="font-extrabold text-3xl lg:text-4xl text-indigo-600">&#129514;ChemQuest!&#10024;</p>
+        <p class="text-black font-bold text-2xl lg:text-3xl">&#127881; Quiz Completed!</p>
+        <p class="text-black text-center font-bold text-lg lg:text-xl">You answered <span class="correct-option">0</span> out of 25 questions correctly.</p>
+        <p class="result-message text-black text-center font-bold text-lg lg:text-xl"></p>
+        <div class="flex flex-row items-center justify-evenly w-full h-32">
+          <button class="play-again-button p-2 rounded-lg shadow-sm text-white bg-indigo-500 lg:hover:bg-indigo-700 font-medium text-sm">&#127919; Play Again</button>
+          <button class="p-2 rounded-lg shadow-sm text-white bg-gray-600 lg:hover:bg-gray-800 font-medium text-sm">Review Answers</button>
+        </div>
+      </section>
+    </main>
+    <script src="data/questions.js"></script>
+    <script src="scripts/game.js"></script>
+  </body>
+</html>
