@@ -18,7 +18,6 @@ let wrongOption = 0
 const questionElement = document.querySelector('.question');
 const answerButtons = document.querySelectorAll('.answer');
 const submitButton = document.querySelector('.submit');
-const playAgain = document.querySelector('.play-again-button');
 const message = document.querySelector('.result-message');
 
 function showQuestion() {
@@ -81,13 +80,4 @@ submitButton.addEventListener('click', () => {
       }, 500);
     });
   }
-});
-
-playAgain.addEventListener('click', () => {
-  resultPage.classList.add('hidden');
-  setTimeout(() => {
-    resultPage.style.display = 'none';
-    gamePage.style.display = 'block';
-    gamePage.classList.remove('hidden');
-  }, 500);
 });
